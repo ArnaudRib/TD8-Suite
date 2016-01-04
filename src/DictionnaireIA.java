@@ -17,25 +17,6 @@ public class DictionnaireIA {
 	public static Path path=Paths.get("/Users/Arnaud/Desktop/algorithmie/WorkSpace/TD8/dict.txt");
 	public static String Interdit="";
 	
-	public static boolean find(String mot){
-		Charset charset=Charset.forName("UTF-8");
-		Path path= Paths.get("/Users/Arnaud/Desktop/algorithmie/WorkSpace/TD8/dict.txt");
-		boolean test=false;
-		try (BufferedReader reader=Files.newBufferedReader(path, charset)){
-			String line=null;
-			while ((line=reader.readLine())!=null){
-				if (mot.equals(line)){
-					test=true;
-				}
-			}
-			reader.close();
-			return test;
-		}catch (IOException x){
-			System.err.format("IOException: %s%n", x);
-			return test;
-		}
-	}
-	
 	public static String chose(){
 		Charset charset=Charset.forName("UTF-8");
 		String motaleatoire="";
